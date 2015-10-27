@@ -14,12 +14,12 @@ public class VelocityRange
     }
 }
 public class PlayerCollider : MonoBehaviour {
-    //public Text ScoresLabels;
-    //public Text LivesLabels;
-    //public Text gameOverLabel;
-    //public Text finalScoreLabel;
-    //public int _scoreValue;
-    //public int _livesValue;
+    public Text ScoresLabels;
+    public Text LivesLabels;
+    public Text gameOverLabel;
+    public Text finalScoreLabel;
+    public int _scoreValue;
+    public int _livesValue;
 
     //public instance variables
     public float speed = 50f;
@@ -52,11 +52,11 @@ public class PlayerCollider : MonoBehaviour {
         this._CoinSound = this._audioSources[0];
         this._JumpSound = this._audioSources[1];
 
-        //this.gameOverLabel.enabled = false;
-        //this.finalScoreLabel.enabled = false;
+        this.gameOverLabel.enabled = false;
+        this.finalScoreLabel.enabled = false;
 
 
-        //this._setScore();
+        this._setScore();
 
 
     }
@@ -143,23 +143,23 @@ public class PlayerCollider : MonoBehaviour {
         if (otherCollider.gameObject.CompareTag("Coins"))
         {
             this._CoinSound.Play();
-            //this._scoreValue += 100;
+            this._scoreValue += 100;
         }
         else if (otherCollider.gameObject.CompareTag("Enemy"))
         {
             this._CoinSound.Play();
-    //        //this._livesValue--;
-    //        //if (this._livesValue <= 0)
-    //        //{
-    //        //    //this._EndingSound.Play();
+            this._livesValue--;
+            if (this._livesValue <= 0)
+            {
+                //this._EndingSound.Play();
 
-    //        //    //yield return new WaitForSeconds(300);
-    //        //    this._EndGame();
-    //        //}
+                //yield return new WaitForSeconds(300);
+                this._EndGame();
+            }
 
         }
 
-        //this._setScore();
+        this._setScore();
 
     }
 
@@ -175,21 +175,21 @@ public class PlayerCollider : MonoBehaviour {
         }
     }
 
-    //private void _setScore()
-    //{
-    //    this.ScoresLabels.text = "Scores: " + this._scoreValue;
-    //    this.LivesLabels.text = "Lives: " + this._livesValue;
+    private void _setScore()
+    {
+        this.ScoresLabels.text = "Scores: " + this._scoreValue;
+        this.LivesLabels.text = "Lives: " + this._livesValue;
 
-    //}
+    }
 
-    //private void _EndGame()
-    //{
-    //    Destroy(gameObject);
-    //    this.ScoresLabels.enabled = false;
-    //    this.LivesLabels.enabled = false;
-    //    this.gameOverLabel.enabled = true;
-    //    this.finalScoreLabel.enabled = true;
-    //    this.finalScoreLabel.text = "FinalScore :" + this._scoreValue;
+    private void _EndGame()
+    {
+        Destroy(gameObject);
+        this.ScoresLabels.enabled = false;
+        this.LivesLabels.enabled = false;
+        this.gameOverLabel.enabled = true;
+        this.finalScoreLabel.enabled = true;
+        this.finalScoreLabel.text = "FinalScore :" + this._scoreValue;
 
-    //}
+    }
 }
