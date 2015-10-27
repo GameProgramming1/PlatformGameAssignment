@@ -145,9 +145,9 @@ public class PlayerCollider : MonoBehaviour {
             this._CoinSound.Play();
             //this._scoreValue += 100;
         }
-    //    else if (otherCollider.gameObject.CompareTag("Enemy"))
-    //    {
-    //        this._CoinSound.Play();
+        else if (otherCollider.gameObject.CompareTag("Enemy"))
+        {
+            this._CoinSound.Play();
     //        //this._livesValue--;
     //        //if (this._livesValue <= 0)
     //        //{
@@ -157,7 +157,7 @@ public class PlayerCollider : MonoBehaviour {
     //        //    this._EndGame();
     //        //}
 
-    //    }
+        }
 
         //this._setScore();
 

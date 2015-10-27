@@ -48,6 +48,8 @@
      <Compile Include="Assets\_Scripts\BackgroundController.cs" />
      <Compile Include="Assets\_Scripts\CoinController.cs" />
      <Compile Include="Assets\_Scripts\CoinObjectScript.cs" />
+     <Compile Include="Assets\_Scripts\EnemyController.cs" />
+     <Compile Include="Assets\_Scripts\EnemyObjectScript.cs" />
      <Compile Include="Assets\_Scripts\PlatformCoinScript.cs" />
      <Compile Include="Assets\_Scripts\PlayerCollider.cs" />
  <Reference Include="UnityEngine.UI">
