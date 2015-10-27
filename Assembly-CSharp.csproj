@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\_Scripts\BackgroundController.cs" />
+     <Compile Include="Assets\_Scripts\CoinController.cs" />
      <Compile Include="Assets\_Scripts\PlayerCollider.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

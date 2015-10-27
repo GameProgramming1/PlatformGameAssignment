@@ -138,13 +138,13 @@ public class PlayerCollider : MonoBehaviour {
     }
 
     //on collision with coin
-    //void OnCollisionEnter2D(Collision2D otherCollider)
-    //{
-    //    if (otherCollider.gameObject.CompareTag("Coin"))
-    //    {
-    //        this._CoinSound.Play();
-    //        //this._scoreValue += 100;
-    //    }
+    void OnCollisionEnter2D(Collision2D otherCollider)
+    {
+        if (otherCollider.gameObject.CompareTag("Coins"))
+        {
+            this._CoinSound.Play();
+            //this._scoreValue += 100;
+        }
     //    else if (otherCollider.gameObject.CompareTag("Enemy"))
     //    {
     //        this._CoinSound.Play();
@@ -161,7 +161,7 @@ public class PlayerCollider : MonoBehaviour {
 
         //this._setScore();
 
-    //}
+    }
 
     private void flip()
     {
